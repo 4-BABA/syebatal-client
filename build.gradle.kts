@@ -18,7 +18,7 @@ buildscript {
 apply<KorgeGradlePlugin>()
 
 korge {
-	id = "io.baba4.syebatal.client.client"
+	id = "io.baba4.syebatal.client"
 // To enable all targets at once
 
 	//targetAll()

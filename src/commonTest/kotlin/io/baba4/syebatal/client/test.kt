@@ -1,3 +1,5 @@
+package io.baba4.syebatal.client
+
 import com.soywiz.klock.*
 import com.soywiz.korge.input.*
 import com.soywiz.korge.tests.*
