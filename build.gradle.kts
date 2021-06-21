@@ -1,5 +1,10 @@
 import com.soywiz.korge.gradle.*
 
+plugins {
+	kotlin("multiplatform") version "1.5.10"
+	id("io.gitlab.arturbosch.detekt") version "1.17.1"
+}
+
 buildscript {
 	val korgePluginVersion: String by project
 
@@ -33,4 +38,22 @@ korge {
 	targetDesktop()
 	targetIos()
 	targetAndroidIndirect() // targetAndroidDirect()
+}
+
+
+dependencies {
+	detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.17.1")
+}
+
+detekt {
+	toolVersion = "1.17.1"
+	failFast = true
+	buildUponDefaultConfig = true
+	input = files("$projectDir/src/commonMain", "$projectDir/src/commonTest")
+	config = files("$projectDir/config/detekt.yml")
+
+	reports.html {
+		enabled = true
+		destination = file("$projectDir/reports/detekt.html")
+	}
 }

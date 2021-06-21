@@ -7,9 +7,13 @@ import com.soywiz.korma.geom.SizeInt
 
 
 object ApplicationModule : Module() {
+    private const val WINDOW_WIDTH = 1280
+    private const val WINDOW_HEIGHT = 720
+
     override val mainScene = MainMenuScene::class
     override val bgcolor = Colors["#2d2d2d"]
-    override val size = SizeInt(1280, 720)
+    override val size = SizeInt(WINDOW_WIDTH, WINDOW_HEIGHT)
+
 
     override suspend fun AsyncInjector.configure() {
         mapPrototype { MainMenuScene() }
