@@ -1,4 +1,4 @@
-package io.baba4.syebatal.client
+package io.baba4.syebatal.client.scenes
 
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.view.Container
@@ -13,7 +13,7 @@ abstract class KTreeScene(
     abstract suspend fun init(kTree: View)
 
     override suspend fun Container.sceneInit() {
-        val tree = resourcesVfs["$kTreeName.ktree"].readKTree(views)
+        val tree = resourcesVfs["scenes/$kTreeName.ktree"].readKTree(views)
         addChild(tree)
         init(tree)
     }

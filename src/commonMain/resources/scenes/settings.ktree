@@ -1,0 +1,4 @@
+<ktree width="640.0" height="480.0" gridWidth="20" gridHeight="20">
+	<text name="title" x="160.0" y="20.0" autoScaling="false" text="Settings" textSize="96.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<uibutton name="btn_back" x="16.0" y="40.0" text="Back" textSize="12.0" width="64.0" height="48.0"/>
+</ktree>

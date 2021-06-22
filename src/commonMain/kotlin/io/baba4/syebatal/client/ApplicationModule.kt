@@ -4,6 +4,8 @@ import com.soywiz.korge.scene.Module
 import com.soywiz.korim.color.Colors
 import com.soywiz.korinject.AsyncInjector
 import com.soywiz.korma.geom.SizeInt
+import io.baba4.syebatal.client.scenes.MainMenuScene
+import io.baba4.syebatal.client.scenes.SettingsScene
 
 
 object ApplicationModule : Module() {
@@ -18,5 +20,6 @@ object ApplicationModule : Module() {
 
     override suspend fun AsyncInjector.configure() {
         mapPrototype { MainMenuScene() }
+        mapPrototype { SettingsScene() }
     }
 }
