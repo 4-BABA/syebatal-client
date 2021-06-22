@@ -7,8 +7,8 @@ import com.soywiz.korma.geom.SizeInt
 
 
 object ApplicationModule : Module() {
-    private const val WINDOW_WIDTH = 1280
-    private const val WINDOW_HEIGHT = 720
+    private const val WINDOW_WIDTH = 640
+    private const val WINDOW_HEIGHT = 480
     private const val BACKGROUND_COLOR = "#2d2d2d"
 
     override val mainScene = MainMenuScene::class
